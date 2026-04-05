@@ -1,1 +1,345 @@
-Project Page is coming!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaperOrchestra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Pastel Palette */
+            --bg-color: #f8fafc;
+            --container-bg: #ffffff;
+            --text-main: #334155;
+            --text-light: #64748b;
+            --border-color: #e2e8f0;
+            --accent-soft: #e0f2fe;
+            --highlight-bg: #f0fdf4;
+            --highlight-border: #166534;
+            --link-hover: #3b82f6;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            background-image: radial-gradient(#e2e8f0 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 60px 20px;
+            padding: 60px 80px;
+            background: var(--container-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            color: #0f172a;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            text-align: center;
+            letter-spacing: -1px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(120deg, #1e293b, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            letter-spacing: 0.2px;
+        }
+
+        .authors {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            padding: 15px;
+            background: var(--accent-soft);
+            border-radius: 8px;
+            color: var(--text-main);
+        }
+
+        .authors a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .authors a:hover {
+            color: var(--link-hover);
+            border-bottom: 1px solid var(--link-hover);
+        }
+
+        .authors sup {
+            color: var(--text-light);
+            font-weight: 300;
+        }
+
+        .institution {
+            display: block;
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 40px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            color: #fff;
+            background: #1e293b;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            background: var(--link-hover);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 12px;
+            margin-top: 50px;
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-size: 1.05rem;
+            text-align: justify;
+            margin-bottom: 20px;
+            color: #475569;
+        }
+
+        .highlight-box {
+            background: var(--highlight-bg);
+            border-left: 4px solid var(--highlight-border);
+            border-radius: 0 8px 8px 0;
+            padding: 25px 35px;
+            margin: 40px 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            line-height: 1.7;
+            color: #166534;
+        }
+        
+        .highlight-box strong {
+            font-weight: 600;
+        }
+
+        .figure-container {
+            text-align: center;
+            margin: 40px 0;
+            padding: 25px;
+            background: #ffffff;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .figure-container img {
+            width: 100%;
+            max-width: 750px;
+            border-radius: 4px;
+        }
+
+        .figure-caption {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-top: 20px;
+            text-align: justify;
+            line-height: 1.6;
+            border-top: 1px dashed var(--border-color);
+            padding-top: 15px;
+        }
+
+        .dataset-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 40px 0;
+            align-items: center;
+        }
+
+        .dataset-grid .figure-container {
+            width: 100%;
+            margin: 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .stat-card {
+            background: var(--accent-soft);
+            padding: 25px 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            font-weight: 400;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 25px;
+                margin: 20px 10px;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            .highlight-box {
+                font-size: 1.05rem;
+                padding: 20px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>PaperOrchestra</h1>
+        <div class="subtitle">A Multi-Agent Framework for Automated AI Research Paper Writing</div>
+        
+        <div class="authors">
+            <a href="https://yiwen-song.github.io/" target="_blank">Yiwen Song</a><sup>1</sup>, 
+            <a href="https://people.csail.mit.edu/yalesong/home/" target="_blank">Yale Song</a><sup>1</sup>, 
+            <a href="https://tomas.pfister.fi/" target="_blank">Tomas Pfister</a><sup>1</sup>, and 
+            <a href="https://sites.google.com/view/jinsungyoon" target="_blank">Jinsung Yoon</a><sup>1</sup>
+            <span class="institution">Google Cloud AI Research</span>
+        </div>
+
+        <div class="btn-container">
+            <a href="#" class="btn">Read the Paper (Coming Soon)</a>
+        </div>
+
+        <h2 class="section-title">Abstract</h2>
+        <p>
+            Synthesizing unstructured research materials into manuscripts is an essential yet under-explored challenge in AI-driven scientific discovery. Existing autonomous writers are rigidly coupled to specific experimental pipelines, and produce superficial literature reviews. We introduce <strong>PaperOrchestra</strong>, a multi-agent framework for automated AI research paper writing. It flexibly transforms unconstrained pre-writing materials into submission-ready manuscripts, including comprehensive literature synthesis and generated visuals, such as plots and conceptual diagrams.
+        </p>
+
+        <div class="highlight-box">
+            <strong>Key Highlight:</strong> In side-by-side human evaluations, PaperOrchestra significantly outperforms autonomous baselines, achieving an absolute win rate margin of <strong>50%-68%</strong> in literature review quality, and <strong>14%-38%</strong> in overall manuscript quality.
+        </div>
+
+        <h2 class="section-title">PaperWritingBench Dataset</h2>
+        <p>
+            To evaluate performance independently, we present <strong>PaperWritingBench</strong>, the first standardized benchmark of reverse-engineered raw materials from 200 top-tier AI conference papers (100 papers per venue from CVPR 2025 and ICLR 2025). This venue selection ensures high academic standards while rigorously testing the adaptability of AI writers to distinct conference formats, namely the double-column CVPR layout versus the single-column ICLR layout. Our dataset isolates the writing task by providing unconstrained, pre-writing inputs. This approach mimics the authentic research phase where experiments are completed but drafting has not yet begun, challenging AI writing systems to rely purely on sparse ideas and lab notes.
+        </p>
+        <p>
+            These raw materials consist of an <em>Idea Summary</em> (distilling the core methodology and theoretical foundation) and an <em>Experimental Log</em> (containing fully extracted numeric data from tables, while insights from figures are converted into standalone factual observations), alongside venue-specific LaTeX templates and conference guidelines.
+        </p>
+
+        <div class="dataset-grid">
+            <div class="figure-container">
+                <img src="figures/cvpr2025_stats.png" alt="CVPR 2025 Dataset Statistics">
+                <div class="figure-caption">
+                    <strong>Figure 1:</strong> CVPR 2025 Dataset Statistics.
+                </div>
+            </div>
+            <div class="figure-container">
+                <img src="figures/iclr2025_stats.png" alt="ICLR 2025 Dataset Statistics">
+                <div class="figure-caption">
+                    <strong>Figure 2:</strong> ICLR 2025 Dataset Statistics.
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">The Multi-Agent Pipeline</h2>
+        <p>
+            PaperOrchestra strategically decouples the writing process across specialized agents to enable parallel execution and iterative self-reflection. The <strong>Outline Agent</strong> synthesizes inputs into a structured plan; the <strong>Plotting Agent</strong> generates conceptual diagrams and statistical plots; the <strong>Literature Review Agent</strong> conducts targeted web searches to discover candidate papers and verifies their existence and relevance via the Semantic Scholar API to build a robust citation graph; the <strong>Section Writing Agent</strong> authors the full LaTeX manuscript; and the <strong>Content Refinement Agent</strong> iteratively optimizes the draft based on simulated peer-review feedback.
+        </p>
+
+        <div class="figure-container">
+            <img src="figures/overview.png" alt="PaperOrchestra Framework Overview">
+            <div class="figure-caption">
+                <strong>Figure 3:</strong> Overview of the PaperOrchestra framework. Specialized agents systematically parse raw materials, synthesize plots and literature, compile a full draft, and iteratively refine the manuscript into a submission-ready PDF.
+            </div>
+        </div>
+
+        <h2 class="section-title">Human Evaluation</h2>
+        <p>
+            We benchmarked PaperOrchestra against two primary autonomous pipelines: a <strong>Single Agent</strong> baseline (which processes all raw materials and executes drafting in a single monolithic LLM call) and <strong>AI Scientist-v2</strong> (a state-of-the-art system featuring multi-round citation gathering and iterative self-reflection). 
+        </p>
+
+        <p>
+            To rigorously compare ours against the baselines, we conducted side-by-side (SxS) human evaluations with 11 AI researchers. Evaluators blindly compared manuscripts generated by PaperOrchestra against the AI baselines, as well as the human-written Ground Truth (GT).
+        </p>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">50%–68%</div>
+                <div class="stat-label">Win Margin in Lit Review Quality</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">14%–38%</div>
+                <div class="stat-label">Win Margin in Overall Quality</div>
+            </div>
+        </div>
+
+        <div class="figure-container">
+            <img src="figures/human_eval_bar.png" alt="Human Side-by-Side Evaluation Bar Chart">
+            <div class="figure-caption">
+                <strong>Figure 4:</strong> Human Side-by-Side (SxS) Evaluation Results. The charts display the win, tie, and loss percentages of PaperOrchestra against baselines. PaperOrchestra consistently outperforms both AI baselines (Single Agent and AI Scientist), though a quality gap remains compared to the human-written ground truth (GT).
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
