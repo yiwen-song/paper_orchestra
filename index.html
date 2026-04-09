@@ -293,6 +293,21 @@
             margin-bottom: 10px;
             font-style: italic;
         }
+        
+        /* BibTeX Code Block */
+        .bibtex-block {
+            background: #f1f5f9;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            font-family: monospace;
+            font-size: 0.95rem;
+            color: #1e293b;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            line-height: 1.5;
+        }
 
         /* Deep Zoom Lightbox Modal */
         .modal {
@@ -400,7 +415,7 @@
         </div>
 
         <div class="btn-container">
-            <a href="#" class="btn">Read the Paper (Coming Soon)</a>
+            <a href="https://arxiv.org/abs/2604.05018" target="_blank" class="btn">arXiv Paper</a>
         </div>
 
         <h2 class="section-title">Generated Manuscript Gallery</h2>
@@ -507,6 +522,18 @@
         <p>
             We position our system as an advanced assistive tool designed to accelerate the drafting process of AI research papers, rather than an independent entity capable of claiming authorship. Human researchers must retain full accountability for the factual accuracy, originality, and validity of the claims presented in any generated manuscript. While PaperOrchestra incorporates robust programmatic safeguards—such as API-grounded citation validation—to minimize hallucinations and ensure scholarly rigor, users are responsible for verifying the outputs to prevent the propagation of LLM-derived biases or misinformation.
         </p>
+
+        <h2 class="section-title">Citation</h2>
+        <pre class="bibtex-block">
+@misc{song2026paperorchestramultiagentframeworkautomated,
+      title={PaperOrchestra: A Multi-Agent Framework for Automated AI Research Paper Writing}, 
+      author={Yiwen Song and Yale Song and Tomas Pfister and Jinsung Yoon},
+      year={2026},
+      eprint={2604.05018},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2604.05018}, 
+}</pre>
 
     </div>
 
